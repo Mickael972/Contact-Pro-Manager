@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ajouter un contact</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { color: #333; }
+    form { margin-top: 20px; }
+    input, select { margin: 5px 0; padding: 5px; }
+    button { padding: 10px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+  <h1>Ajouter un contact</h1>
+  <% if (error) { %>
+    <p class="error"><%= error %></p>
+  <% } %>
+  <form action="/contacts/add" method="POST">
+    <input type="text" name="nom" placeholder="Nom" required><br>
+    <input type="text" name="prenom" placeholder="Prénom" required><br>
+    <input type="text" name="societe" placeholder="Société" required><br>
+    <input type="text" name="adresse" placeholder="Adresse" required><br>
+    <input type="tel" name="tel" placeholder="Téléphone" required><br>
+    <input type="email" name="email" placeholder="Email" required><br>
+    <select name="secteur" required>
+      <option value="">Sélectionnez un secteur</option>
+      <option value="Industrie">Industrie</option>
+      <option value="Informatique">Informatique</option>
+      <option value="Santé">Santé</option>
+      <option value="Education">Education</option>
+    </select><br>
+    <button type="submit">Ajouter</button>
+  </form>
+</body>
+</html> 

@@ -1,0 +1,20 @@
+{
+  "name": "contact-pro-manager",
+  "version": "1.0.0",
+  "description": "Application de gestion de contacts professionnels",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.0",
+    "express-session": "^1.17.2",
+    "ejs": "^3.1.6",
+    "bcrypt": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+} 
